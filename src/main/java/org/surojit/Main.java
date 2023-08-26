@@ -1,6 +1,7 @@
 package org.surojit;
 
 import org.surojit.Alog.Sorting.BubbleSort;
+import org.surojit.Alog.Sorting.InsertionSort;
 import org.surojit.Alog.Sorting.SelectionSort;
 
 import java.util.Arrays;
@@ -17,5 +18,9 @@ public class Main {
         System.out.println("Selection sort");
         SelectionSort selectionSort = new SelectionSort(unsortedArray);
         System.out.println("normal>"+ Arrays.toString(selectionSort.sort()));
+
+        System.out.println("Insert sort");
+        InsertionSort insertionSort = new InsertionSort(unsortedArray);
+        System.out.println("normal>"+ Arrays.toString(insertionSort.sort()));
     }
 }
