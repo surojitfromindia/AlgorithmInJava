@@ -9,7 +9,10 @@ public class MergeSort {
     public MergeSort(int[] array) {
         this.array = array;
     }
-
+    public int[] sort() {
+        mergeSort(array, 0, array.length - 1);
+        return array;
+    }
 
     void merge(int[] mergedArray, int start, int middle, int end) {
         int[] leftSortedArray = Arrays.copyOfRange(mergedArray, start, middle + 1);
@@ -18,7 +21,7 @@ public class MergeSort {
         int rAL = rightSortedArray.length;
         int leftPointer = 0;
         int rightPointer = 0;
-        int mergePointer = start;
+        int mergePointer = start; // an in place update required this to be start at correct position
         while (leftPointer < lAL && rightPointer < rAL) {
             if (leftSortedArray[leftPointer] < rightSortedArray[rightPointer]) {
                 mergedArray[mergePointer] = leftSortedArray[leftPointer];
@@ -41,12 +44,6 @@ public class MergeSort {
             rightPointer++;
             mergePointer++;
         }
-    }
-
-
-    public int[] sort() {
-        mergeSort(array, 0, array.length - 1);
-        return array;
     }
 
     void mergeSort(int[] a, int start, int end) {

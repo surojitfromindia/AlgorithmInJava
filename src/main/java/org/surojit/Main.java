@@ -1,15 +1,12 @@
 package org.surojit;
 
-import org.surojit.Alog.Sorting.BubbleSort;
-import org.surojit.Alog.Sorting.InsertionSort;
-import org.surojit.Alog.Sorting.MergeSort;
-import org.surojit.Alog.Sorting.SelectionSort;
+import org.surojit.Alog.Sorting.*;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] unsortedArray = {4, 76, 9, 3, 22, 90, 4, 65};
+        int[] unsortedArray = {52, 37, 63, 14, 17, 6, 8, 2};
 
         System.out.println("Bubble sort");
         BubbleSort bubbleSort = new BubbleSort(unsortedArray);
@@ -26,7 +23,11 @@ public class Main {
 
         System.out.println("Merge sort");
         MergeSort mergeSort = new MergeSort(unsortedArray);
-        System.out.println(Arrays.toString(mergeSort.sort()));
+        System.out.println("normal>"+Arrays.toString(mergeSort.sort()));
+
+        System.out.println("Quick sort");
+        QuickSort quickSort = new QuickSort(unsortedArray);
+        System.out.println("normal>"+Arrays.toString(quickSort.sort()));
 
     }
 }
