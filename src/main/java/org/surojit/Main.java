@@ -1,6 +1,7 @@
 package org.surojit;
 
 import org.surojit.Alog.Sorting.*;
+import org.surojit.DataStructure.LinkedList;
 
 import java.util.Arrays;
 
@@ -29,5 +30,13 @@ public class Main {
         QuickSort quickSort = new QuickSort(unsortedArray);
         System.out.println("normal>"+Arrays.toString(quickSort.sort()));
 
+
+        System.out.println("Linked list");
+        LinkedList linkedList = new LinkedList(12);
+        linkedList.addNodeAtEnd(32);
+        linkedList.addNodeAtFront(9);
+        linkedList.display();
+        linkedList.delete();
+        linkedList.display();
     }
 }
