@@ -1,6 +1,7 @@
 package org.surojit;
 
 import org.surojit.Alog.Sorting.*;
+import org.surojit.Alog.misc.Fibonacci;
 import org.surojit.DataStructure.LinkedList;
 
 import java.util.Arrays;
@@ -38,5 +39,8 @@ public class Main {
         linkedList.display();
         linkedList.delete();
         linkedList.display();
+
+        int _6thFib = Fibonacci.generate(20);
+        System.out.println("Fib "+_6thFib);
     }
 }
