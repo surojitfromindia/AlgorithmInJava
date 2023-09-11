@@ -1,10 +1,9 @@
 package org.surojit.cses;
-import java.util.Scanner;
 
 public class WeirdAlgoProblem {
-    public static void solverFor(int start){
+    public static void solverFor(long start){
         StringBuilder stringBuilder = new StringBuilder();
-        int p = start;
+        long p = start;
         while (p>1){
             stringBuilder.append(p).append(" ");
             if(p%2==0){
